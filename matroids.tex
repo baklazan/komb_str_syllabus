@@ -91,9 +91,9 @@ Nech $M = (X, \mathcal{N})$ je matroid a $A \subseteq X$. Potom platí:
 Nech $M = (X, \mathcal{N})$ je matroid a $\Phi:\powerset(X) \to \powerset(X)$ je jeho úzaverová funkcia (t.j. $\Phi(A) = \bar{A}$).
 Potom platí:
 \begin{enumerate}
-    \item[U1:] $\forall A \subseteq X: A \in \bar{A}$
+    \item[U1:] $\forall A \subseteq X: A \subseteq \bar{A}$
     \item[U2:] $A \subseteq \bar{B} \Longrightarrow \bar{A} \subseteq \bar{B}$
-    \item[U3:] $x \not\in A \wedge x \in \overline{A \cup \set{y}} \Longrightarrow y \in \overline{A \cup \set{x}}$
+    \item[U3:] $x \not\in \bar{A} \wedge x \in \overline{A \cup \set{y}} \Longrightarrow y \in \overline{A \cup \set{x}}$
 \end{enumerate}
 
 Navyše, ak existuje funkcia $\Phi': \powerset(A) \to \powerset(A)$, ktorá spĺňa podmienky U1 --- U3, tak existuje jediný matroid,
@@ -103,7 +103,7 @@ ktorého úzaverovou funkciou je práve $\Phi'$.
 \begin{definition}
 Nech $(X, \mathcal{N})$ je matroid. Množina $K \subseteq X$ sa volá kružnica, ak je to najmenšia (na inklúziu) závislá množina. Formálne,
 množina $K \subseteq X$ je kružnica, ak:
-$$ K \not\in\mathcal{N} \wedge \left(\forall K' \subseteq K: K' \in\mathcal{N} \right)$$ 
+$$ K \not\in\mathcal{N} \wedge \left(\forall K' \subsetneq K: K' \in\mathcal{N} \right)$$ 
 \noindent
 Množinu všetkých kružníc matroidu označujeme ako $\mathcal{K}$.
 \end{definition}
@@ -112,7 +112,7 @@ Množinu všetkých kružníc matroidu označujeme ako $\mathcal{K}$.
 Nech $(X, \mathcal{N})$ je matroid a $\mathcal{K}$ je množina všetkých jeho kružníc. Potom platí:
 \begin{enumerate}
     \item[K1:] žiadne dva prvky množiny $\mathcal{K}$ nie sú v inklúzii
-    \item[K2:] $K, K' \in \mathcal{K} \wedge K \neq K' \wedge \exists x \in K \cap K' \Longrightarrow \exists L \in \mathcal{K}: L \subseteq (K \cup K') - \set{x}$
+    \item[K2:] $K, K' \in \mathcal{K} \wedge K \neq K' \wedge x \in K \cap K' \Longrightarrow \exists L \in \mathcal{K}: L \subseteq (K \cup K') - \set{x}$
 \end{enumerate}
 
 Navyše, ak existuje množina $\mathcal{K}'$, ktorá spĺňa podmienky K1 a K2, tak existuje jediný matroid, ktorého množinou kružníc je práve $\mathcal{K}'$.
