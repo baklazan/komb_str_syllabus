@@ -267,10 +267,10 @@ Ak existuje konečná projektívna rovina rádu $n$, tak $n$ je mocninou prvoč�
 
 \begin{definition}
 
-Matica $C = (c_{ij})$ typu $n \times m$, kde $n \geq 4, m \geq 4$ a $c_{ij} \in \set{1, \ldots, n}$,  
-má latinskú vlastnosť, ak lubovoľná podmatica z dvoch stlpcov matice $C$ nemá rovnaké riadky. Formálne,
+Matica $C = (c_{ij})$ typu $n^2 \times m$, kde $n \geq 3, m \geq 4$ a $c_{ij} \in \set{1, \ldots, n}$,  
+má latinskú vlastnosť, ak ľubovoľná podmatica z dvoch stlpcov matice $C$ nemá rovnaké riadky. Formálne,
 
-$$\forall (i, j) \neq (k, l): (c_{ij}, c_{il}) \neq (c_{jk}, c_{jl})$$
+$$\forall (i, j) \neq (k, l): (c_{ij}, c_{il}) \neq (c_{kj}, c_{kl})$$
 
 Navyše, ak podmatica matice $C$, tvorená prvými dvomi stlpcami, obsahuje postupne všetky dvojice čísel $\set{1, \ldots, n}$
 v lexikografickom poradí, tak ju voláme matica s latinskou vlastnosťou v normálnom tvare.
@@ -373,7 +373,7 @@ Každý bezmostový kubický graf má 6 1-faktorov takých, že každá hrana gr
 
 
 \begin{definition}
-Dvojica $(X, \mathcal{B})$, kde $\mathcal{B} \in \powerset(X)$, je $t-(v, k, \lambda)$-blokový plán (angl. \emph{$t$-design}), ak:
+Dvojica $(X, \mathcal{B})$, kde $\mathcal{B} \subseteq \powerset(X)$, je $t-(v, k, \lambda)$-blokový plán (angl. \emph{$t$-design}), ak:
 \begin{itemize}
     \item $\ssize{X} = v$
     \item $\forall B \in \mathcal{B}: \ssize{B} = k$
